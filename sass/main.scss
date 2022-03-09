@@ -1,0 +1,340 @@
+$output-bourbon-deprecation-warnings: false;
+  // @use "sass:list";
+  // @use "sass:map";
+  @use "sass:math";
+  // @use "sass:meta";
+
+// @import "mq";
+@import "bourbon/app/assets/stylesheets/bourbon";
+// @import "../../node_modules/rfs/scss";
+// @import "./node_modules/@fancyapps/ui/src/Fancybox/Fancybox.scss";
+// @import "./node_modules/swiper/swiper.scss";
+
+@import "mixin"; 
+
+// v5
+
+// Layout & components
+
+@import "root";
+@import "base";
+
+
+.ttu{
+  text-transform: uppercase;
+}
+.mono{
+  font-family: 'hagincapsmedium', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.pl-0{
+  padding-left: 0 !important;
+}
+// @import "media"; // Всегда в конце
+
+.for{
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: rem(30);
+  &__title{
+    width: 100%;
+  }
+  @include roww(40px, m);
+  --bs-gutter-x: 10px;
+    @media screen and (min-width: 768px) { 
+      --bs-gutter-x: 15px;
+    }
+
+    @media screen and (min-width: 1000px) { 
+      --bs-gutter-x: 30px;
+    }
+  &__item{
+    @media screen and (min-width: 768px) {
+      border-width: 2px;
+      font-size: 1rem;
+    }
+    font-size: 10px;
+    border: 1px dashed #802910; 
+    border-radius: 5px;
+    color: #7A2810;
+    height: em(75px);
+    line-height: 120%;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: em(5);
+    padding-right: em(5);
+    width: calc(100% / 3 - var(--bs-gutter-x));
+  }
+}
+
+.document-creation__column{
+
+}
+
+p.text{
+  font-size: 15px;
+line-height: 150%;
+margin-bottom: rem(30px);
+}
+.mono-title{
+  font-size: em(24);
+    width: 100%;
+    font-weight: 500;
+    color: #000;
+    text-transform: uppercase;
+    margin-bottom: em(9);
+    @extend .mono;
+}
+.row{
+  @include roww(10px);
+  @media screen and (min-width: 768px){
+    --bs-gutter-x: 30px
+  }
+  display: flex;
+  flex-wrap: wrap;
+}
+.col-md-6{
+  width: 50%;
+}
+.col-md-6{
+  @media screen and (min-width: 440px) {
+    
+    width: 50%;
+  } 
+}
+.row--group{
+  --bs-gutter-x: 7px !important;
+  @media screen and (min-width: 440px){
+    --bs-gutter-x: 30px !important;
+  }
+  p.text{
+    @media screen and (min-width: 440px) {
+
+      font-size: 14px;
+    }
+    margin-bottom: 12px;
+  }
+  @include roww(35px);
+  .block{
+    @media screen and (min-width: 440px) {
+    width: 55%;
+    &--res{
+      width: 45%;
+    }
+    }
+  }
+
+}
+
+
+
+.frame{
+
+  .for{
+    --bs-gutter-x: 5px;
+    @media screen and (min-width: 768px) { 
+      --bs-gutter-x: 15px;
+    }
+
+    @media screen and (min-width: 1000px) { 
+      --bs-gutter-x: 30px;
+    }
+    
+  }
+
+  .block{
+    @media screen and (min-width: 440px) {
+    width: 50%;
+    &--res{
+      width: 50%;
+    }
+    }
+  }
+}
+
+.block{
+  &__price{
+    @extend .mono;
+   font-weight: 500;
+   font-size: rem(20); 
+   color: #802910;
+   &--lg{
+     font-size: rem(36);
+   }
+  }
+  p{
+    margin-bottom: rem(15);
+  }
+  .button{
+    border-radius: 5px;
+    overflow: hidden;
+    margin-left: 0;
+    margin-right: 0;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @extend .mono;
+    width: 100%;
+    &.document-creation__button{
+      max-width: 170px;
+    }
+    &.button_empty-red{
+      max-width: 196px;
+      box-shadow: none;
+      border: 1px solid #802910; 
+      height: 48px;
+      @media screen and (min-width: 1000px) {
+        display: flex;
+      }
+      display: none;
+      &:not(:hover){
+
+        color: #7a2810;
+      }
+    }
+  }
+}
+p.mono{
+  font-family: 'hagincapsmedium', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  color: #802910;
+}
+
+
+.footer-block{
+  button{
+    border-radius: 5px;
+    overflow: hidden;
+    margin-left: 0;
+    margin-right: 0;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'hagincapsmedium', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    width: 100%;
+    @media screen and (min-width: 768px){
+      
+      max-width: 196px;
+    }
+    max-width: 117px;
+    &:not(:hover){
+
+      color: #7a2810;
+    }
+      box-shadow: none;
+      border: 1px solid #802910; 
+      height: 48px;
+    @media screen and (min-width: 1000px) {
+
+      display: none;
+    }
+  }
+  border-top: 1px solid rgba(128, 41, 16, 0.2);
+  padding-top: 10px;
+  @media screen and (max-width: 1000px){
+    display: flex;
+    button{
+      flex:  0 0 auto;
+      width: 170px;
+      margin-right: rem(16);
+    }
+  }
+  @media screen and (min-width: 1000px){
+
+    max-width: 266px;
+  }
+  p{
+    color: rgba(0, 0, 0, 0.8);
+    line-height: 150%;
+    font-size: 8px;
+    @media screen and (min-width: 1000px){
+      
+      font-size: 11px;
+      margin-right: -20px;
+    }
+  }
+}
+.info__title--top{
+  font-size: 40px;
+}
+
+.list-item{
+  display: flex;
+  // align-items: center;
+  @media screen and (min-width: 768px){
+    
+    width: 50%;
+  }
+  width: 100%;
+  margin-bottom: 30px;
+  &__img-wrap{
+    flex:  0 0 auto;
+    width: 50px;
+    @media screen and (min-width: 768px){
+    width: 72px;
+    }
+    text-align: center;
+    margin-right: 15px;
+    img{
+      vertical-align: top;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  &__title{
+    @extend .mono;
+    font-weight: 500;
+    font-size: rem(18);
+    @media screen and (min-width: 440px){
+    font-size: rem(22);
+    }
+    margin-bottom: 5px;
+    line-height: 1;
+    color: #D0B991;
+    text-transform: uppercase;
+  }
+  p{
+    // line-height: 1;
+    @media screen and (max-width: 440px){
+      font-size: 12px;
+    }
+    line-height: 120%;
+    max-width: 440px;
+  }
+}
+
+.section__indent.pl-0{
+  margin-left: auto;
+  margin-right: auto;
+  max-width: (545px * 2 + 60px);
+  .info__title{
+    margin-bottom: rem(40);
+    text-transform: uppercase;
+  }
+}
+
+
+
+@media screen and (min-width: 768px) {
+
+}
+
+
+@media screen and (max-width: 440px) {
+  .title__content{
+    font-size: 20px;
+  }
+  .document-creation__frame.frame{
+    padding-left: 12px;
+    padding-right: 12px;
+    border-width: 5px;
+  }
+  p.text{
+    font-size: 10px;
+  }
+}

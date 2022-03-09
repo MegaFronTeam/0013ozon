@@ -1,0 +1,34 @@
+
+:root {
+	--animate-delay: 1.2s;
+	--bs-body-font-size: #{$em-base};
+
+	--sPT: #{rem(80 * .5)};
+	--sPB: #{rem(90 * .5)};
+	--sTPB: #{rem(40 * .5)};
+
+
+		--swiperArrowSize: #{rem(68)};
+		--swiperArrowPosition: calc(-1 * var(--swiperArrowSize) / 2);
+		--swiperBorderColorDef: var(--bs-primary);
+		--swiperColorDef: var(--bs-primary);
+		--swiperBgDef: #ffffff;
+	
+		--swiperBorderColorDefHover: var(--bs-primary);
+		--swiperColorDefHover: var(--bs-primary);
+		--swiperBgDefHover: #ffffff;
+
+
+	--fancybox-bg: rgba(24, 24, 27, .77);
+
+
+
+	  //  --carousel-button-width: 48px;
+	  //  --carousel-button-height: 48px;
+
+	  //  --carousel-button-svg-width: 24px;
+	  //  --carousel-button-svg-height: 24px;
+
+	  //  --carousel-button-svg-stroke-width: 2.5;
+	  //  --carousel-button-svg-filter: drop-shadow(1px 1px 1px rgba(0, 0, 0/ 0.4));
+} 

@@ -1,0 +1,142 @@
+include _assets/bemto/bemto
+- set_bemto_settings({ modifier: "--" })
+doctype html
+// saved from url=(0027)https://ozon.ndflcenter.ru/
+html(lang='ru')
+	head
+		meta(http-equiv='Content-Type' content='text/html; charset=UTF-8')
+		// <base href="https://ozon.ndflcenter.ru/">
+		base(href='.')
+		meta(name='viewport' content='width=device-width, initial-scale=1')
+		meta(http-equiv='x-ua-compatible' content='ie=edge')
+		title Налоговый сервис по ценным бумагам
+		meta(name='description' content='')
+		link(rel='shortcut icon' href='https://ozon.ndflcenter.ru/favicon.ico' type='image/x-icon')
+		link(rel='stylesheet' href='assets/components.css')
+		link(rel='stylesheet' href='assets/style.css')
+		style.
+			.intro .list__item {
+			margin-bottom: 7px;
+			padding-top: 3px;
+			}
+		link(rel='stylesheet' href='assets/default.css' type='text/css')
+		link(rel='stylesheet' href='css/main.css' type='text/css')
+	body
+
+		section.section
+			#step3(style='height: 54px')
+			.box
+				.title.title_line
+					h3
+						| Выберите
+						span.title__highlight свой случай
+				.document-creation
+					.document-creation__column
+						p.title.title_numbered.title_red
+							span.document-creation__title
+								span.title__number 1
+								span.title__content
+									| самостоятельно заполнить
+									br
+									| на нашем конструкторе
+						
+						+b.for
+							+e.title.mono-title Подходит для
+							+e.item Сделок <br> “Exersale” 
+							+e.item  Сделок  <br>“Exercise” 
+							+e.item Российских <br> доходов 
+						p.text Не придется вручную заполнять. Все сделки загружаются XLS файлом. Добавьте персональные данные и даты поступления денег - остальное рассчитается автоматически. Специалист ответит на Ваши вопросы при заполнении конструктора. 
+						.row.row--group
+							+b.block.col-md-6
+								+e.price--lg 3 800 руб
+								p.text До 15 сделок с RSU OZON
+
+								+e.price  + 1 000 руб
+								p.text За 10 дополнительных сделок
+
+								+e.price  + 2 000 руб
+								p.text Сделки Exercise с RSU OZON
+
+								+e.price  + 1 000 руб 
+								p.text Налоговые вычеты 
+
+								+e.price  + 2 500 руб
+								p.text Дивиденды иностранных эмитетов
+
+							+b.block--res.col-md-6
+								.mono-title Результат
+								p.mono Готовый пакет документов  <br> за 10 минут 
+								p Скачайте готовый пакет (декларация 3-НДФЛ pdf+xml, справочный расчет по RSU OZON, инструкция). Отправьте в ИФНС через личный кабинет ФНС.
+								button.button.document-creation__button(data-popup='popup_signup' type='button') Заполнить
+						//- .document-creation__item
+						//- 	button.button.button_empty-red.document-creation__button(data-popup='popup_signup' type='button') Начать заполнение
+					.document-creation__column
+						.frame.paper.document-creation__frame
+							p.title.title_red.title_numbered
+								span.document-creation__title
+									span.title__number 2
+									span.title__content
+										| Поручить заполнение
+										br
+										| консультанту
+							+b.for
+								+e.title.mono-title Подходит для
+								+e.item Любых сделок <br> RSU OZON
+								+e.item  Российских <br> доходов 
+								+e.item Иностранных <br> доходов
+							p.text Консультант Центра разберет Вашу ситуацию, подготовит расчет и декларацию 3 -НДФЛ, а второй консультант проверит еще раз
+							.row.row--group
+								+b.block--res.col-md-6
+									.mono-title Результат
+									p.mono Готовый пакет документов <br> любой сложности
+									p Через 3-5 дней вы получите полный пакет документов для самостоятельной подачи в ИФНС. В пакет входит - декларация 3-НДФЛ, pdf + xml, справочное пояснение к расчету НДФЛ по сделкам OZON, квитанция на уплату налога, заявление на возврат, инструкция
+									button.button.button_empty-red.document-creation__button(data-popup='popup_signup2' type='button') Заполнить
+								+b.block.col-md-6
+									+e.price--lg 9 500 руб
+									p.text До 20 сделок с RSU OZON
+
+									+e.price  + 2 000 руб
+									p.text За 20 дополнительных сделок
+
+									+e.price  + 1 800 руб 
+									p.text Сделки Exercise с RSU OZON
+
+									+e.price  + 1 800 руб 
+									p.text Налоговые вычеты 
+
+									+e.price  + 2 500 руб
+									p.text Дивиденды иностранных эмитетов (до 20 штук)
+									+e.price  + 2 000 руб
+									p.text Зачет убытков по операциям с ЦБ и ПФИ (за каждый источник) 
+							+b.footer-block
+								button.button.button_empty-red.document-creation__button(data-popup='popup_signup2' type='button') Заполнить
+								p При наличии Interactive brokers и других иностранных брокеров - обратитесь за расчетом стоимости к консультантам Центра.
+
+		section.section.plan.paper
+			#step2(style='height: 54px')
+			.box
+				.section__indent.pl-0
+					.plan__container
+						.plan__content
+							p.info__title.info__title--top.info__title_gold О нашем Центре
+							br
+							.row
+								mixin item(i,t,p)
+									+b.list-item
+										+e.img-wrap 
+											img(src=`img/icon-i-${i}.svg`, alt="")
+										div
+											+e.title= t
+											p!= p
+								+item(`1`,`Давно в деле`,`Специализируемся на НДФЛ с 2014 года`)
+								+item(`2`,`Автоматизировали декларации для Альфа-капитала`,`Запустили автомтизированный сервис <br> для инвесторов Альфа-Капитала`)
+								+item(`3`,`Поддерживаем своих`,`Сопровождаем участников <br> программ мотивации`)
+								+item(`4`,`Облегчаем процесс декларирования`,`Разработали автоматизированный сервис по&nbsp;декларированию RSU YNDX`)
+								+item(`5`,`Полный цикл услуг`,`От подготовки деклараций до ведения <br>  споров с ИФНС`)
+								+item(`6`,`Работаем специально для RSU OZON`,`Разработали отдельный конструктор, существенно облегчающий процесс декларирования RSU OZON`)
+				.brackets
+					img.brackets__bracket.image(src='assets/bracket-left.svg' alt='bracket-left')
+					.brackets__content
+						p.info__title.info__title_gold.ttu(style='text-align: center;') Добиваемся победного результата в налоговой!
+					img.brackets__bracket.image(src='assets/bracket-right.svg' alt='bracket-right')
+		
